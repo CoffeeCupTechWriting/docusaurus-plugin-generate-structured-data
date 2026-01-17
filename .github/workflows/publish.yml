@@ -46,9 +46,11 @@ jobs:
           semantic_version: 25.0.2
           branch: main
           extra_plugins: |
-            @semantic-release/github
-            @semantic-release/git
+            @semantic-release/commit-analyzer
+            @semantic-release/release-notes-generator
             @semantic-release/npm
+            @semantic-release/git
+            @semantic-release/github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
